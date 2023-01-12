@@ -16,7 +16,7 @@ if (isset($_SESSION["login"])) {
         ?>
         <div class="container m-0 p-0 mx-auto mt-3">
             <div class="text-center">
-                <h3 class="text-warning mb-3">MD Shop - Admin</h3>
+                <h3 class="text-warning mb-3">MD Pay - Admin</h3>
                 <h6 class="text-warning mb-3">Bejelentkezve: <?php echo $login["username"]; ?></h6>
             </div>
             <nav class="navbar navbar-expand-sm navbar-light bg-primary rounded-top">
