@@ -2,5 +2,7 @@
     define('HOST', 'localhost');
     define('USER', 'root');
     define('PASSWORD', '');
-    define('DBNAME', 'mdshop');  
+    define('DBNAME', 'database');
+    
+    define('EMAILPASS', 'realpassword');
 ?>

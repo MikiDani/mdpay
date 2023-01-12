@@ -1,4 +1,5 @@
 <?php
+require "../backend/connect.php";
 
 require "PHPMailer/Exception.php";
 require "PHPMailer/PHPMailer.php";
@@ -19,15 +20,15 @@ if ($allOk) {
     
     $to = $_POST['useremail'];
 
-    $senderName = "MD-Pay";
-    $senderAddress = "mdpay@mikidani.probaljaki.hu";
+    $senderName = "MD-Shop";
+    $senderAddress = "mdshop@mikidani.probaljaki.hu";
 
     try {
         $mail->isSMTP();
         $mail->Host = 'mail.nethely.hu';
         $mail->SMTPAuth = true;
         $mail->Username = $senderAddress;
-        $mail->Password = 'abcdef';
+        $mail->Password = EMAILPASS;
         $mail->Port = 1025;
         
         $mail->setFrom($senderAddress, $senderName);
@@ -38,7 +39,7 @@ if ($allOk) {
         $mail->Subject = 'Rendelés visszaigazolása';
         $mail->Body = '<p>Feladója: '.$senderName.'<br>Email címe: '.$senderAddress.'<br>Üzenete:<br>
         Megrendelés visszaigazoló link:<br>
-        <a href="http://web.mikidani.probaljaki.hu/mdpay/frontend/verified.php?userid='.$_POST['userid'].'&code='.$_POST['code'].'" target="_blank">http://web.mikidani.probaljaki.hu/mdpay/frontend/verified.php?userid='.$_POST['userid'].'&code='.$_POST['code'].'</a></p>';
+        <a href="http://web.mikidani.probaljaki.hu/mdshop/frontend/verified.php?userid='.$_POST['userid'].'&code='.$_POST['code'].'" target="_blank">http://web.mikidani.probaljaki.hu/mdshop/frontend/verified.php?userid='.$_POST['userid'].'&code='.$_POST['code'].'</a></p>';
        
         $mail->send();
 
