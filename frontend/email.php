@@ -19,7 +19,7 @@ if (!isset($_POST['msgBody'])) { $allOk = false; }
 
 if ($allOk) {   
     
-    $toMe = "mdshop@mikidani.probaljaki.hu";
+    $toMe = "mdpay@mikidani.probaljaki.hu";
     $senderName = $_POST['senderName'];
     $senderAddress = $_POST['senderAddress'];
 
