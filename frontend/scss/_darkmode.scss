@@ -1,0 +1,115 @@
+
+@mixin createMode ($bg-primary, $bg-secondary, $bg-third, $color-primary, $color-secondary, $color-third, $footer-bg, $mode) {
+
+    background-color: $bg-primary;
+    color: $color-primary;
+
+    .page {
+        padding: 0;
+        background-color: $bg-secondary;
+    }
+
+    .th-color1 { color:$color-primary; }
+    .th-color2 { color:$color-secondary; }
+    .th-color3 { color:$color-third; }
+
+    .th-bg1 { color:$bg-primary; }
+    .th-bg2 { color:$bg-secondary; }
+    .th-bg3 { color:$bg-third; }
+    .th-bg4 { color:$footer-bg; }
+
+    .theme-colorstyle01 {
+        background-color: $bg-third;
+        color: $color-secondary;
+    }
+
+    .theme-colorstyle-link01 {
+        color: $color-secondary;
+
+        &:hover {
+            color: $dark-color-third;
+        }
+    }
+    
+    .title-block, .title-inline {
+        background-color: $bg-third;
+        color: $color-secondary;
+        border-radius: 5px;
+        padding-left:1rem;
+        padding-top:0.3rem;
+        padding-bottom:0.3rem;
+        margin-bottom:1rem;
+        font-weight: 500;
+    }
+
+    .title-block {
+        display: block;
+    }
+
+    .title-inline {
+        display: inline;
+    }
+
+    footer {
+        background-color: $footer-bg;
+    }
+
+    .footer-text-link {
+        font-family: $font01;
+        font-weight: 600;
+        color: $color-primary;
+        cursor: pointer;
+
+        &:hover {
+            font-weight: 600;
+            @if $mode == dark { color: $color-third; }
+            @if $mode == light { color: $page-orange; }
+        }
+
+        &:active {
+            font-weight: 600;
+            @if $mode == dark { color: $page-orange; }
+            @if $mode == light { color: $color-third; }
+        }
+    }
+
+    .home-text-link {
+        font-family: $font01;
+        color: $color-primary;
+        font-weight: 500 !important;
+
+        & a {
+            @if $mode == dark { color: $color-third; }
+            @if $mode == light { color: #1d97b2; }
+        }
+        & a:hover {
+            font-weight: 600;
+        }
+    }
+
+    .product-div {
+        background-color: $bg-primary;
+        border-radius: 0.5rem;
+    }
+
+    .p-price {
+        color: $color-third;
+    }
+
+    .link1 {
+        color: $color-primary;
+        & a {
+            color: $color-primary;
+        }
+    }
+
+}
+
+.dark-mode {
+    @include createMode ($dark-bg-primary, $dark-bg-secondary, $dark-bg-third, $dark-color-primary, $dark-color-secondary, $dark-color-third, $footer-bg-dark, 'dark');
+}
+
+.light-mode {
+    @include createMode ($light-bg-primary, $light-bg-secondary, $light-bg-third, $light-color-primary, $light-color-secondary, $light-color-third, $footer-bg-light, 'light');
+}
+

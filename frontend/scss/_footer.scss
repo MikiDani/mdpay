@@ -1,0 +1,31 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 1rem;
+    div {
+        max-width: 30%;
+    }
+
+    ul {
+        list-style-type: none;
+        list-style: none;
+        padding: 0.2rem;
+        text-indent: 0;
+    }
+    
+    li {
+        font-size: 0.8rem;
+        list-style-type: none;
+        text-indent: 0;
+    }
+}
+
+#footer-logo{
+    margin-bottom: 0.5rem;
+    min-width: 7rem;
+}
+
+#bottom-jump {
+    cursor: pointer;
+}

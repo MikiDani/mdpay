@@ -1,0 +1,59 @@
+// Dark Mode switch
+
+#modeSwitch {  
+    text-align: center !important;
+    &:hover {
+        background-color: #bababa !important;
+    }
+    
+    &:focus {
+        border: 0 !important;
+    }
+    
+    background-color: #8a8a8a !important;
+    border: 0 !important;
+}
+ 
+// menu
+
+.collapse ul {
+    margin-top: 8px;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+.header-menuBox > .bg-light {
+    background-color: $menu-bg-light!important;
+}
+
+.header-menuBox > .bg-dark {
+    background-color: $menu-bg-dark !important;
+}
+
+.hambColor {
+    background-color: #bababa88 !important;
+}
+
+a.nav-link {
+    text-align: center !important;
+}
+
+.activeMenuText {
+    font-weight: bold;
+}
+
+.opacity-bg {
+    background-color: #fff2;
+}
+
+.fci {
+    border:0 !important;
+    box-shadow: none !important;
+    &:hover {
+        border:0 !important;
+        box-shadow: none !important;
+    }
+}

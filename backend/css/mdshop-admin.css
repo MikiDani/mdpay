@@ -1,0 +1,81 @@
+:root {
+    scroll-behavior: auto !important;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #111;    
+    scroll-behavior: auto !important;
+}
+
+.page {
+    height: 100vh;
+}
+
+.navbar-nav {
+    font-weight: bold;
+}
+
+.accordion {
+    --bs-accordion-active-color: #fff;
+    --bs-accordion-active-bg: #293950;
+}
+
+.accordion-button {
+    background-color: #74acff;
+}
+
+a.nav-link {
+    text-align: center !important;
+}
+
+.collapse > ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;   
+}
+
+.icon-controll{
+    margin:0;
+    padding:0;
+    width: 15px;
+}
+
+.primaryborder {
+    border: 3px solid green;
+}
+
+.newtipo {
+    font-size: 0.8rem;
+}
+
+.verticalalign {
+    vertical-align: middle !important;
+}
+
+.reset-position {
+    position: absolute;
+    vertical-align: top;
+    padding-bottom:6px;
+    left: 0.5rem;
+    top: 0.5rem;
+}
+
+.red-bg, .green-bg {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    color: white;
+}
+
+.text-id {
+    font-size: 0.8rem;
+}
+
+.red-bg {
+    background-color: #c21616 !important;
+}
+
+.green-bg {
+    background-color: #1c8f1c !important;
+}

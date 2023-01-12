@@ -1,0 +1,84 @@
+<div class="title-block">Bemutatkozás</div>
+<div class="home-text-link">
+    <p>Miklós Dániel vagyok. Vizsgamunkának egy webshopot készítettem. A vizsgamunkának a forráskódja és dokumentációja GitHub-on elérhető: <a href="https://github.com/MikiDani/mdpay/" target="_blank">https://github.com/MikiDani/mdpay/</a></p>
+    <div class="ms-3 mt-2 mb-3">
+        Az oldal dokumentációi és a felhasznált adatbázis itt elérhető:<br>
+        MD-Shop technikai felépítése: <a href="http://web.mikidani.probaljaki.hu/mdpay/documentation/mdpay_felepitese.pdf" target="_blank">mdpay_felepitese.pdf</a><br>
+    </div>
+    <p>Az oldalnak három fő részre bontható. REST API rész, ADMIN rész, FRONTEND rész. Az adatok MYSQL adatbázisban vannak tárolva. A REST API kommunikál az adatbázissal. A FRONTEND és az ADMIN az API-n keresztül éri el az adatbázist. Az API és ADMIN felületet PHP-ban, a FRONTEND felület pedig javascript nyelven van megírva. Az oldal az ADMIN és FRONTEND felület reszponzív megjelenítéséhez Bootstrap keretrendszert használ.</p>
+    <h4 class="text-center">Frontend rész:</h4>
+    <h5>Bemutatkozás menüpont:</h5>
+    <p>Itt a vizsgamunkával kapcsolatos információkat lehet megtalálni. A dokumentációkhoz linkeket találunk.</p>
+    <h5>Felhasználó menüpont:</h5>
+    <p>A felhasználó menüpontban tudunk regisztrálni, vagy ha már regisztráltunk akkor belépni a profilunkhoz a frontend oldalon. Itt két felhasználó már regisztrálva van a könnyebb tesztelhetőség érdekében.</p>
+    <table class="table table-center theme-colorstyle01">
+        <thead>
+            <tr>
+                <th>Felhasználó</th>
+                <th>Jelszó</th>
+                <th>Rang</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>user00</td>
+                <td>123456</td>
+                <td>user</td>
+            </tr>
+            <tr>
+                <td>admin00</td>
+                <td>123456</td>
+                <td>admin</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>A bejelentkezés után aktiválódik a kosár és a kedvencek menüpont. Ilyenkor a felhasználó menüpontban megjelenik az adatlapunk ahol módosíthatjuk az elektronikus levél címünket illetve az info mezőnket.  Az email címnek email formátumúnak kell lennie. A jelszavunk megadása után törölhetjük profilunkat, vagy módosíthatjuk jelszavunkat.</p>
+    <p>Regisztrációnál ha már regisztrált nevet vagy emailt adunk meg akkor hibaüzenettel tér vissza. Minimum és maximum karakterszámot jelzi a felület ha nem megfelelő hosszúságút adunk meg.</p>
+    <h5>Termékek menüpont:</h5>
+    <p>Termékek menüpontban először a termékek listáját találjuk. Miután kiválasztottunk egy terméket akkor a termék tulajdonságai aloldalra kerülünk. A termékek menüpontot akkor is elérjük ha nem vagyunk bejelentkezve, viszont nem tudjuk a termékeket a kosárba belerakni, illetve a kedvencek gomb se jelenik meg a termék kiválasztásánál.</p>
+    <h5>Termékek szűrése:</h5>
+    <p>A következő módokon szűrhetjük a termékeket:</p>
+    <ul>
+        <li>Tipus szerint: Az adatbázisban megadott típusok szerint szűri a termékeket.</li>
+        <li>Név szerint: ha megtalálható a termék nevében amit megadunk csak azokat listázza ki.</li>
+        <li>Minimum ár és Maximális ár szerint: Csak a két ár közötti árnak megfelelő termékeket listázza.</li>
+        <li>Akciós termék: Csak azokat a termékeket listázza aminek megvan adva kedvezmény.</li>
+    </ul>
+    <p>Egyszerre több szűrést is megadhatunk. Ha a listából ráklikkelünk egy termékre akkor a termék információs lapra jutunk ahol részletes információkat tudhatunk meg az adott termékről. Ha Akciós a termék akkor külön megjeleníti az eredeti és az akciós árat is. Az akció százaléka is megjelenik a terméknév mellett. A kis képekre kattintva megtehinthetjük nagyban a képet.</p>
+    <p>Ha nem vagyunk bejelentkezve:</p>
+    <ul>
+        <li>A kosárba gomb helyett egy belépés gomb jelenik meg ami átnavigál a bejelentkezéshez.</li>
+    </ul>
+    <p>Ha be vagyunk jelentkezve:</p>
+    <ul>
+        <li>Megjelenik a kedvencek gomb a terméknév másik oldalán.</li>
+        <li>A termék kosárba helyezésének mennyiségét a készlet erejéig lehet növelni.</li>
+        <li>A kosárba gombra kattintva a termék bekerül a kosárba és a kosár menüpontra ugrik a képernyő.</li>
+    </ul>
+    <h5>Kosár menüpont:</h5>
+    <p>A kosár ikonja bejelentkezés esetén a fejlécben folyamatosan látható. Ha nincsen benne termék akkor üresnek mutatja, ha van akkor sárgán jelzi tartalmát. Ilyenkor megjelenik egy szám ami azt mutatja hogy hány termék található jelenleg a kosárban. A kosár menüpont két részre bontható: kosár tartalmára és a megrendelési adatokra.</p>
+    <h5>A kosár tartalma:</h5>
+    <p>A kosár tartalmában azok a termékek jelennek meg amiket kiválasztottunk megvásárlásra. A termékszám változtatható a készlet erejéig. Ha a termékszámot nullára csökkentjük akkor autómatikusan kikerül a kosárból. Alul a kosár tartalmának aktuális végösszegét láthatjuk.</p>
+    <h5>Megrendelési adatok:</h5>
+    <p>Itt megjelennek a felhasználó ismert adatai. A megrendeléshez még ki kell tölteni a megrendelési címet és be kell ikszelni a "felhasználási és rendeltetési feltételeket". Ha hiányzik valami a kitöltésből a küldés gomb megnyomása után üzenetben jelzi nekünk a felület. Sikeres megrendelés esetén a megrendelés rögzítődik az adatbázisban, és a bemutatkozás menüpontra ugrunk ahol egy zöld szövegdoboz jelenik meg azzal az üzenettel hogy "Sikeres megrendelésrögzítés". Ekkor az oldal küld az emailünkre egy megrendelés visszaigazoló linket.</p>
+    <h5>Kedvencek menüpont:</h5>
+    <p>A kedvencek ikonja bejelentkezés esetén a fejlécben folyamatosan megtalálható. A kedvencek listát a felhasználó profijában rögzítődik ellentétben a kosár tartalmával. Hogyha újra bejelentkezünk a kedvencek is újra betöltődnek. A kedvencek listából egyenként törölhetőek a kedvencek.</p>
+    <ul>
+        <li>Ha nincsen kedvenc termékünk akkor egy üres szivecskét látunk.</li>
+        <li>Ha van kedvenc termékünk a listában akkor sárgán kitöltött szivecske jelenik meg.</li>
+    </ul>
+    <h5>Elérhetőség menüpont:</h5>
+    <p>Az elérhetőség menüpontban megtalálhatóak az elérhetőségeim. Ez alatt van egy email küldési lehetőség ami a <a href="https://webmail.nethely.hu/" target="_blank">mdpay@mikidani.probaljaki.hu</a> levélcímre küld üzenetet. A dokumetációban megtalálhatjuk az elérhetőségeit.</p>
+    <h4 class="text-center">ADMIN rész:</h4>
+    <p>Az ADMIN felületen csak admin rangú felhasználók tudnak belépni. Itt használható az admin00 felhasználó. Belépéskor a felhasználónak egy token kódja generálódik amit hat órán keresztül használhat a belépésének az azonosítására. Ha közben újra belép akkor a hat óra újra indul a token kódnak.</p>
+    <h5>Az admin felület három részből áll:</h5>
+    <h5>Felhasználók menüpont:</h5>
+    <p>Belépés után ide érkezik meg az oldal. Látjuk a felhasználók listáját. Ha megnyomunk egy felhasználót akkor a bootstrap harmónika kinyílik az adataival. Igény esetén módosíthatjuk a felhasználó rangját vagy törölhetjük az adatbázisból.</p>
+    <h5>Termékek menüpont:</h5>
+    <p>A termékek listáját tartalmazza. Tartalmaz egy szűrő blokkot ahol igény esetén szűkíthetjük a keresett termékre vagy termékekre a listát. A menü alatt a terméknév megadása és típus kiválasztása után hozzá tudunk adni új terméket az adatbázishoz. Miután hozzáadtuk megjelenik a listában üres adatokkal. Ezután ha kiválasztjuk kitölthetjük a termék adatait. A termékek adatai mellett találunk egy gombot amivel a módosítást rögzíthetjük.<br>
+    Kép feltöltésekor csak jpg, jpeg, png és gif kiterjesztések megengedettek. A fájl mérete legfeljebb 500 kilobyte lehet. Ha nem megfelelő file-t szeretnénk feltölteni akkor a rendszer üzenetben jelzi mivel van a probléma. Az első kép feltöltése esetén autómatikusan az lesz a kiemelt kép. Több kép feltöltése után az lesz a kiemelt kép amelyikre rákattintunk. A kiemelt kép elsőként listázódik és egy zöld keretet kap. Ha töröli szeretnénk a képet akkor egy piros kuka gombbal megtehetjük. Képaláírást nem kötelező adni a képnek. Termék törlés esetén autómatikusan törlődnek a hozzá kapcsolódó képek és adatok a szerverről. Törlés után nem marad adat szemét a szerveren a termék után.</p>
+    <h5>Megrendelés menüpont:</h5>
+    <p>Itt a felhasználók által regisztrált megrendelések listáját találjuk időrendi sorrendben listázva a megrendelési azonosítóval. A megrendelő adatain felül megtalálhatjuk a megrendelési címet és a megrendelt termékek listáját. A rendellés levélen történő megerősítését is mutatja a "rendelés megerősítése" sor.</p>
+    <h4 class="text-center">REST API rész:</h4>
+    <p>Ez az api.php backend rész ami kommunikál a MySQL adatbázissal. A megfelelően felépített beérkező JSON kérésekre válaszol JSON formában. Az azonosítás úgy van felépítve hogy mindenképpen végrehajódik. Ha a kérés szerepel a listán akkor az api továbbengedi az adatcsoport kiválasztása részhez. Ha az API nem kap toket-t a felhasználó azonosítására, és nincsen a kérés a listán akkor Unauthorized üzenettel tér vissza 401-es státuszkóddal. Ha az azonosítás megtörtént az adatcsoport kiválasztása után ér el a megfelelő művelethez a kérés. Ha minden bejövő adat megfelelő akkor vérehajtódik a kért művelet.</p>
+</div>

@@ -1,0 +1,101 @@
+<div id="head-text-button" class="title-block">Termékek</div>
+
+<div id="products-loading" class="text-center p-1 rounded mb-3">Loading... <img src="./img/loading.gif" alt="loading"></div>
+
+<div id="products-list" class="row w-100 p-0 m-0">
+    <!-- FILTER DIV -->
+    <div class="products-filterbox row p-0 m-0 mb-3 text-center rounded">
+        <div class="m-0 p-0 col-sm-12 col-md-6 col-xl-3 p-1">
+            <label class="filter-label d-block">típus:</label>
+            <div id="filter-type"></div>
+        </div>
+        <div class="m-0 p-0 col-sm-12 col-md-6 col-xl-3 p-1">
+            <label class="filter-label d-block">név:</label>
+            <input type="text" id="filter-name" autocomplete="off" class="form-control filter-textinput d-inline w-75" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+            <button id="filter-name-button" class="btn btn-primary btn-sm d-inline">Ok</button>
+        </div>
+    
+        <div class="m-0 p-0 col-sm-12 col-md-6 col-xl-3">
+            <div class="filter-label d-block">Minimum ár:</div>
+            <label id="filter-min-text" class="filter-label-range minwidth">Ft</label>
+            <input type="range" id="filter-min" class="form-range w-50">
+            <label id="filter-min-text-value" class="filter-label-range minwidth">Ft</label>
+        </div>
+        
+        <div class="m-0 p-0 col-sm-12 col-md-6 col-xl-3">
+            <div class="filter-label d-block">Maximum ár:</div>
+            <label id="filter-max-text" class="filter-label-range minwidth">Ft</label>
+            <input type="range" id="filter-max" class="form-range w-50">
+            <label id="filter-max-text-value" class="filter-label-range minwidth">Ft</label>
+        </div>
+        
+        <div class="form-check bg-warning markdown-poz d-inline m-0 p-1 ps-2 pe-2">
+            <input class="fci" type="checkbox" id="filter-markdown">
+            <label class="filter-label">Akciós termék</label>
+        </div>
+    </div>
+    <!-- FILTER END -->
+    <div id="products-gridbox"></div>
+</div>
+
+<div id="products-selected" class="color2">
+    <div class="selectproduct-name theme-colorstyle01">
+        <span id="p-name">Name</span>
+        <div id="favorite-buttonxy" class="favorite-button"></div>
+    </div>
+    <div class="row m-0 p-0 mt-2">
+        <div class="m-0 p-0 col-sm-12 col-md-6">
+            <div class="propeties-container">
+                <div class="color2">
+                    <div>Termék Típusa:</div>
+                </div>
+                <div class="color2 endround">
+                    <div id="p-type"></div>
+                </div>
+                <div class="p-originalprice-div color1">
+                    <div>Eredeti ára:</div>            
+                </div>
+                <div class="p-originalprice-div color1 endround">
+                    <div id="p-originalprice-value"> Ft</div>
+                </div>
+                <div class="p-markdownprice-div color3">
+                    <div>Akciós ára:</div>
+                </div>
+                <div class="p-markdownprice-div color3 endround">
+                    <div id="p-markdownprice-value"> Ft</div>
+                </div>
+            </div>
+            <div class="color2 endround">
+                <div class="prod-text-margin prodhead">Termék Leírása</div>
+            </div>
+            <div class="color1 endround">
+                <div id="p-description-value" class="prod-text-margin mb-2">Lorem ipsum, dolor.</div>
+            </div>
+        </div>
+        <div class="basket-much-div col-sm-12 col-md-6 m-0 p-3 mb-2">
+
+            <div id="product-select-markdown"></div>
+
+            <div id="pb-price" class="basket-price"> Ft</div>
+            <div><hr class="basket-hr"></div>
+            <div id="pb-instock" class="basket-instock">Készleten van: db</div>
+            <div class="basket-much-button mt-1">
+                <div id="bmb-minus-value" class="bmb bmb-minus"></div>
+                <div id="bmb-input-value" class="bmb-how">db</div>
+                <div id="bmb-plus-value" class="bmb bmb-plus"></div>
+            </div>
+            <!-- button helye -->
+            <div id="bmb-submit" class="prod-button-div mt-2 mb-1"></div>
+        </div>
+    </div>
+    <div id="prod-pictures-container">
+        <!-- Képek helye -->
+    </div>
+    <div class="selectproduct-footerclose theme-colorstyle01">
+        <p id="bottom-jump">Ugrás az oldal tetejére</p>
+    </div>
+</div>
+
+<script>
+    var products = new Products();
+</script>

@@ -1,0 +1,175 @@
+
+$header-primary-text-color: #fff;
+$header-secondary-text-color: #ffeedd;
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: DodgerBlue;
+    $header-height: 100px;
+
+    color: $header-primary-text-color;
+    & div {
+        margin: 0;
+    }
+    
+    &-logoBox {
+        flex-basis: 245px;
+        background-color: #334455;
+        align-items: center;
+    }
+    
+    &-searhBox {
+        color: white;
+    }
+    
+    &-buttonBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & div {
+            line-height: 0;
+            align-items: baseline;
+        }
+    }
+
+    &-menuBox {
+        width: 100%;
+    }
+}
+
+#darkSwitchButton {
+    border: 0;
+}
+
+.headButton {
+    background-size: cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    margin: 5px;
+}
+
+@mixin headIconMaker ($name) {
+    background-image: url('../img/head/head-#{$name}.svg');
+
+    &:hover {
+        background-image: url('../img/head/head-#{$name}2.svg');
+    }
+
+    &:focus {
+        background-image: url('../img/head/head-#{$name}2.svg');
+    }
+}
+
+.activeUserLogin {
+    background-image: url('../img/head/head-user3.svg') !important;
+    &:hover {
+        background-image: url('../img/head/head-user3.svg') !important;
+    }
+    &:active {
+        background-image: url('../img/head/head-user3.svg') !important;
+    }
+    &:focus {
+        background-image: url('../img/head/head-user3.svg') !important;
+    }
+}
+
+.activeFavoriteButton {
+    background-image: url('../img/head/head-favorite3.svg') !important;
+    &:hover {
+        background-image: url('../img/head/head-favorite3.svg') !important;
+    }
+    &:active {
+        background-image: url('../img/head/head-favorite3.svg') !important;
+    }
+    &:focus {
+        background-image: url('../img/head/head-favorite3.svg') !important;
+    }
+}
+
+.activeBasketButton {
+    background-image: url('../img/head/head-basket3.svg') !important;
+    &:hover {
+        background-image: url('../img/head/head-basket3.svg') !important;
+    }
+    &:active {
+        background-image: url('../img/head/head-basket3.svg') !important;
+    }
+    &:focus {
+        background-image: url('../img/head/head-basket3.svg') !important;
+    }
+}
+
+.thingsValue {
+    $size: 1.3rem;
+    $half: calc($size/2);
+    
+    width: $size;
+    height: $size;
+
+    position: relative;
+    left: 2px;
+    bottom: 15px;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.6rem;
+    
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: $half;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 0;
+
+    background-color: $page-blue;
+    border-radius: $half;
+    border: 2px solid white;
+}
+
+.darkSwitch-on {
+    background-image: url('../img/head/darkswitch-on.svg');
+}
+
+.darkSwitch-off {
+    background-image: url('../img/head/darkswitch-off.svg');
+}
+
+$headButtons: (
+    "darkSwitch": darkSwitch,
+    "user": user,
+    "favorite": favorite,
+    "basket": basket
+);
+
+@each $key, $value in $headButtons {
+    .#{$key}Pic {
+        @include headIconMaker($value);
+    }
+}
+
+.modeSwitch-on, .modeSwitch-off  {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    &:hover{
+        background-color: #00112233;
+        border-radius: 10px;
+    }
+}
+
+.modeSwitch-off {
+    background-image: url('../img/head/darkSwitch-off.svg');
+}
+
+.modeSwitch-on {
+    background-image: url('../img/head/darkSwitch-on.svg');
+}
+
+.iflogin {
+    display: none;
+}

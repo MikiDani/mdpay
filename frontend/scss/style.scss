@@ -1,0 +1,165 @@
+$light-bg-primary: #fff;
+$light-bg-secondary: #a1c7ed;
+$light-bg-third: #182d42;
+$light-color-primary: #000;
+$light-color-secondary: #ddd;
+$light-color-third: #0088ff;
+
+$dark-bg-primary: #030303f8;
+$dark-bg-secondary: #001122;
+$dark-bg-third: #9ecbf8;
+$dark-color-primary: #fff;
+$dark-color-secondary: #000;
+$dark-color-third: #5fa7d1;
+
+$menu-bg-light: #ffeeaa;
+$menu-bg-dark: #0e274e;
+
+$footer-bg-light: #ffeeaa;
+$footer-bg-dark: #0e274e;
+
+$page-blue: #3dc0f0;
+$page-orange: #ffa500;
+$page-brown: #ffa50088;
+
+$whitecolor: #fff;
+$opacity1: #5f9ea033;
+$opacity2: #d9eff044;
+
+$font01: 'Quicksand', sans-serif;
+
+@import "_darkmode";
+@import "_header";
+@import "_footer";
+@import "_products";
+@import "_lists";
+@import "_bootstrap-mod";
+
+body {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+}
+
+.menu-font {
+    font-size: 0.9rem;
+}
+
+#content {
+    padding: 1rem;
+}
+
+button {
+    background-color: #00000000;
+}
+
+#registrationDiv, #userDiv {
+    display: none;
+}
+
+#loginDiv {
+    display: block;
+}
+
+#usr-message, #log-message, #reg-message, #email-message {
+    list-style: none;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    & ul {
+        list-style: none;
+        list-style-type: none;
+        margin:0;
+        padding:0;
+    }
+}
+
+.message {
+    text-align: center;
+    font-family: $font01;
+    font-weight: bold;
+    margin: 1rem 1rem 0 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#map {
+    width: 100%;
+    height: 30vh;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+.contact-box {
+    font-family: $font01;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    & p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    & a {
+        color: $page-blue;
+        text-decoration: none;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}
+
+.font01 {
+    font-family: $font01;
+}
+
+.home-text {
+    font-size: 0.9rem;
+    text-align: left;
+
+}
+
+.floating-container {
+    font-family: $font01;
+    background-color: $dark-color-secondary;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center; 
+}
+
+.floating-box {
+    font-family: $font01;
+    background-color: $light-color-third;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    text-align: center;
+    & a {
+        color: $whitecolor;
+        text-decoration: none;
+        font-size: 0.8rem;
+    }
+}
+
+.floating-logo {
+    background-color: $light-bg-third;
+    border-radius: 0.5rem;
+}
+
+#jumpEmail {
+    width: 100%;
+    height: 2000px;
+    background-color: chartreuse;
+}
+
+@media (min-width: 1024px) {
+    .page {
+        max-width: 1024px;
+        background-color: aquamarine;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <!-- Main -->
+    <link rel="stylesheet" href="scss/style.css">
+    <!-- Scripts -->
+    <script src="../bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="../jQuery/jquery.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <title>MD-Shop | Miklós Dániel - vizsgamunka</title>
+</head>
+<body class="light-mode">
+    <div class="container page p-0">
+        <!-- header -->
+        <div class="header">
+            <div class="header-logoBox"><a href="index.html"><img src="img/head/logo-head.svg" alt="MD-logo" title="MD-logo"></a></div>            
+            <div class="header-buttonBox">
+                <div><button id="darkSwitchButton"></button></div>
+                <div><button id="basketButton" class="headButton basketPic"></button></div>
+                <div><button id="favoriteButton" class="headButton favoritePic"></button></div>
+                <div><button id="userButton" class="headButton userPic"></button></div>
+            </div>
+        </div>
+        <!-- menu -->
+        <div class="header-menuBox">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler hambColor mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse menu-font" id="navbarToggler">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Bemutatkozás</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Termékek</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Felhasználó</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Elérhetőség</a>
+                            </li>
+                            <li class="nav-item iflogin">
+                                <a class="nav-link" href="#">Kosár</a>
+                            </li>
+                            <li class="nav-item iflogin">
+                                <a class="nav-link" href="#">Kedvencek</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- content -->
+        <div id="message"></div>
+        <div id="content">content</div>
+        <!-- footer -->
+        <footer>
+            <div>
+                <ul>
+                <li><span id="footer-login" class="footer-text-link"></span></li>
+                <li><span id="footer-registracion" class="footer-text-link"></span></li>
+                <li><span id="footer-logout" class="footer-text-link"></span></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="index.html"><img id="footer-logo" src="./img/head/logo-head.svg" alt="md-shop" title="logo"></a></li>
+                    <li class="text-center th-bg3">MD-webshop</li>
+                    <li class="text-center th-bg3">Miklós Dániel</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                <li><span id="footer-products" class="footer-text-link">Termékek</span></li>
+                <li><span id="footer-contact" class="footer-text-link">Elérhetőség</span></li>
+                </ul>
+            </div>
+        </footer>  
+    </div>
+</body>
+</html>

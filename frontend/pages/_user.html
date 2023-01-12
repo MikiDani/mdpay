@@ -1,0 +1,92 @@
+<div id="registrationDiv">
+    <div class="opacity-bg col-10 col-sm-9 col-md-8 col-lg-7 mx-auto rounded p-2 text-center">
+        <h3 class="mt-0 mb-3">Regisztráció</h3>
+        <div class="mb-2 col-11 col-sm-9 col-md-8 col-lg-7 mx-auto">
+            <label>Felhasználónév:</label>
+            <input class="form-control mb-3" type="text" id="reg-username" placeholder="felhasználónév" autocomplete="off">
+            <label>e-mail cím:</label>
+            <input class="form-control mb-3" type="text" id="reg-email" placeholder="email" autocomplete="off">
+            <label>Jelszó:</label>
+            <input class="form-control mb-3" type="password" id="reg-pwd1" placeholder="jelszó">
+            <label>Jelszó megerősítése:</label>
+            <input class="form-control mb-2" type="password" id="reg-pwd2" placeholder="jelszó megerősítése">
+            <button class="btn btn-secondary mb-2" id="reg-reset">Mégse</button>
+            <button class="btn btn-primary mb-2" id="reg-submit">Regisztráció</button>
+        </div>
+        <div class="col-12 mb-2 text-danger" id="reg-message"></div>
+        <a id="logSwitch" href="#" class="pb-2 d-inline-block">Már regisztráltam.</a>
+    </div>
+</div>
+
+<div id="loginDiv">
+    <div class="opacity-bg col-10 col-sm-9 col-md-8 col-lg-7 mx-auto rounded p-2 text-center">
+        <h3 class="mt-0 mb-3">Bejelentkezés</h3>
+        <div class="mb-2 col-11 col-sm-9 col-md-8 col-lg-7 mx-auto">
+            <label>Felhasználónév vagy email cím:</label>
+            <input class="form-control mb-3" type="text" id="log-usernameoremail" placeholder="felhasználónév vagy email cím" autocomplete="off">
+            <label>Jelszó:</label>
+            <input class="form-control mb-3" type="password" id="log-pwd" placeholder="jelszó">
+            <button class="btn btn-primary" id="log-submit">Bejelentkezés</button>
+        </div>
+        <div class="col-12 text-danger text-center m-0 p-0" id="log-message"></div>
+        <a id="regSwitch" href="#" class="pb-2 d-inline-block">Még nem regisztráltam.</a>
+    </div>
+</div>
+
+<div id="userDiv">
+    <div class="opacity-bg col-10 col-sm-9 col-md-8 col-lg-7 mx-auto rounded p-2 text-center">
+        
+        <h5 class="mt-0 mb-3">Bejelentkezve: <span id="username"></span></h5>
+
+        <label>email:</label>
+        <input type="text" id="usr-email" class="form-control form-control-sm" autocomplete="off">
+        <button id="usr-email-submit" class="btn btn-primary btn-sm d-block mx-auto mt-2 mb-2">módósítás</button>
+                
+        <label>info:</label>
+        <textarea id="usr-info" class="form-control form-control-sm" cols="30" rows="3"></textarea>
+        <button id="usr-info-submit" class="btn btn-primary btn-sm d-block mx-auto mt-2 mb-2">módósítás</button>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">Jelszó módosítás vagy felhasználó törlése</button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <label class="mt-3 mb-1">Jelszó megadása:</label>
+                        <input type="password" id="usr-pwd" class="form-control form-control-sm">
+                        <label class="mt-3 mb-1">Új jelszó:</label>
+                        <input type="password" id="usr-newpwd" class="form-control form-control-sm">
+                        <label class="mt-3 mb-1">Új jelszó mégegyszer:</label>
+                        <input type="password" id="usr-newpwd2" class="form-control form-control-sm">
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <button class="col-6 btn btn-primary" id="usr-passmod-submit">Jelszó módosítása</button>
+                            <button class="col-6 btn btn-danger" id="usr-delete-submit">Felhasználó törlése</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="usr-message" class="d-inline-block p-2 text-danger"></div>
+
+        <div class="mb-2 col-11 col-sm-9 col-md-8 col-lg-7 mx-auto">
+            <button class="btn btn-primary" id="logout-submit">Kijelentkezés</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var userForms = new UserForms();
+    
+    var sendValues = {'footerregistration': 'Regisztráció'}
+
+    if (localStorage.getItem('login')) {
+        sendValues['footerlogout'] = "Kijelentkezés";
+    }
+    
+    page.footerLinksOptions(sendValues);
+</script>

@@ -1,0 +1,58 @@
+<div class="title-block">Kosár</div>
+
+<div class="text-center mb-3">
+    <button id="basket-back-button" class="back-to-products btn btn-warning mx-auto">Vissza a termékekhez</button>
+</div>
+
+<div class="row p-0 m-0">
+    <div id="basket-button-basket" class="bb-button-class">Kosár</div>
+    <div id="basket-button-address" class="bb-button-class">Megrenelési adatok</div>
+    <div id="all-basket-div" class="bb-bg-class">
+    </div>
+    <div id="all-address-div" class="bb-bg-class">
+
+        <label class="address-label">név:</label>
+        <p id="ba-username" class="adress-data text-center"></p>
+        <label class="address-label">email:</label>
+        <p id="ba-useremail" class="adress-data text-center"></p>
+        <label class="address-label">információ:</label>
+        <p id="ba-userinfo" class="adress-data text-center"></p>
+
+        <div class="text-center">
+            
+            <label class="address-label ba-50 mb-1">irányítószám:</label>
+            <label class="address-label ba-50 mb-1">település:</label>
+            
+            <input type="number" id="ba-referencenumber" min="1011" max="9985" value="1011" autocomplete="off" minlength="4" maxlength="4" placeholder="irányítószám" class="adress-data text-left form-control ba-50">
+            
+            <input type="text" id="ba-city" placeholder="város" autocomplete="off" class="adress-data text-left form-control d-inline ba-50 mb-2">
+            
+            <label class="address-label mt-2 mb-1">cím</label>
+            <input type="text" id="ba-street" placeholder="megnevezés" autocomplete="off" class="adress-data text-left form-control d-inline ba-50 mb-2">
+            
+            <select id="ba-type" aria-placeholder="qwe" class="form-control d-inline ba-25 mb-2">
+                <option value="út">út</option>
+                <option value="utca">utca</option>
+                <option value="tér">tér</option>
+                <option value="tér">köz</option>
+            </select>
+            
+            <input type="number" id="ba-housenumber" autocomplete="off" min="1" max="9999" placeholder="házszám" class="adress-data form-control d-inline ba-25 mb-2">
+            
+        </div>
+        <div class="row p-0 m-0">
+            <p class="order-small-text p-0 m-0 mt-2">A weboldalon kezdeményezett megrendelés, azaz az "Elolvastam és elfogadom a felhasználási és rendelési feltételeket" bejelölése, és a "Megrendelés elküldése" gombra való kattintás elektronikus úton megkötött szerződésnek minősül.</p>
+            <div class="form-check mt-3">
+                <input id="ba-condition" class="form-check-input" type="checkbox" id="feltetelek">
+                <label class="form-check-label" for="feltetelek">Elolvastam és elfogadom a felhasználási és rendelési feltételeket</label>
+            </div>
+        </div>
+
+        <div id="ba-message" class="text-danger text-center"></div>
+        <button id="order-button" class="d-block btn btn-success mt-2 w-100">Megrendelés elküldése</button>
+    </div>
+</div>
+
+<script>
+    var basket = new Basket();
+</script>
