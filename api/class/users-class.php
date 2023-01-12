@@ -30,7 +30,7 @@
                 }
 
                 try {
-                    $this->textLong('email', $this->inData->email, 6, 20);
+                    $this->textLong('email', $this->inData->email, 6, 50);
                     $this->isEmailUsed($this->inData->email);
                 }
                 catch (Exception $error) {
@@ -153,7 +153,7 @@
                         
                         $errorMsg="";
                         try {
-                            $this->textLong($inputKey, $inputValue, 6, 20);
+                            $this->textLong($inputKey, $inputValue, 6, 50);
                             $this->isEmailUsed($inputValue);
                         }
                         catch (Exception $error) {
