@@ -1,6 +1,5 @@
 # MD-Pay - Dokumentáció
 
-Miklós Dániel vagyok. Vizsgamunkának készítettem ezt a webshopot. Az oldal dokumentációi és a felhasznált adatbázis itt elérhető:<br><br>
 MD-Pay technikai felépítése: [https://github.com/MikiDani/mdpay/blob/master/documentation/mdpay_felepitese.pdf](https://github.com/MikiDani/mdpay/blob/master/documentation/mdpay_felepitese.pdf)<br>
 SQL adatbázis: [https://github.com/MikiDani/mdpay/blob/master/documentation/mdpay_sql.zip](https://github.com/MikiDani/mdpay/blob/master/documentation/mdpay_sql.zip)<br><br>
 A tesztelés megkönnyítése érdekében feltöltöttem egy ideiglenes tárhelyre ahol tesztelhető:<br><br>
